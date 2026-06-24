@@ -1,0 +1,101 @@
+Loading singularityce/4.1.0-gcc-11.4.0
+  Loading requirement: glibc/2.35-none-none gcc-runtime/11.4.0-none-none
+    bzip2/1.0.8-gcc-11.4.0 libiconv/1.18-gcc-11.4.0 xz/5.6.3-gcc-11.4.0
+    zlib-ng/2.2.4-gcc-11.4.0 libxml2/2.13.5-gcc-11.4.0 ncurses/6.5-gcc-11.4.0
+    pigz/2.8-gcc-11.4.0 zstd/1.5.7-gcc-11.4.0 tar/1.35-gcc-11.4.0
+    gettext/0.23.1-gcc-11.4.0 lz4/1.10.0-gcc-11.4.0 lzo/2.10-gcc-11.4.0
+    openssl/3.4.1-gcc-11.4.0 libarchive/3.8.0-gcc-11.4.0
+    pkgconf/2.3.0-gcc-11.4.0 elfutils/0.192-gcc-11.4.0 libffi/3.4.8-gcc-11.4.0
+    pcre2/10.44-gcc-11.4.0 berkeley-db/18.1.40-gcc-11.4.0
+    readline/8.2-gcc-11.4.0 gdbm/1.23-gcc-11.4.0 perl/5.40.0-gcc-11.4.0
+    libmd/1.1.0-gcc-11.4.0 libbsd/0.12.2-gcc-11.4.0 expat/2.7.1-gcc-11.4.0
+    libxcrypt/4.4.38-gcc-11.4.0 sqlite/3.46.0-gcc-11.4.0
+    util-linux-uuid/2.41-gcc-11.4.0 python/3.10.16-gcc-11.4.0
+    python-venv/1.0-none-none glib/2.78.3-gcc-11.4.0 libseccomp/2.6.0-gcc-11.4.0
+    conmon/2.1.13-gcc-11.4.0 json-c/0.18-gcc-11.4.0 libaio/0.3.113-gcc-11.4.0
+    lvm2/2.03.14-gcc-11.4.0 popt/1.19-gcc-11.4.0 util-linux/2.40.2-gcc-11.4.0
+    cryptsetup/2.3.5-gcc-11.4.0 go/1.24.3-gcc-11.4.0 libfuse/3.16.2-gcc-11.4.0
+    libgpg-error/1.55-gcc-11.4.0 shadow/4.16.0-gcc-11.4.0
+    squashfs/4.6.1-gcc-11.4.0
+Tools detection: 3 tasks to run
+Running on input file: chimerdriver.tsv
+Creating structural features...
+iter 0/311
+iter 20/311
+iter 40/311
+iter 60/311
+iter 80/311
+iter 100/311
+iter 120/311
+iter 140/311
+iter 160/311
+iter 180/311
+iter 200/311
+iter 220/311
+iter 240/311
+iter 260/311
+iter 280/311
+iter 300/311
+Creating transcription factor features...
+iter 0/311
+iter 20/311
+iter 40/311
+iter 60/311
+iter 80/311
+iter 100/311
+iter 120/311
+iter 140/311
+iter 160/311
+iter 180/311
+iter 200/311
+iter 220/311
+iter 240/311
+iter 260/311
+iter 280/311
+iter 300/311
+Creating gene ontology features...
+Creating microRNA features...
+iter 0/311
+iter 20/311
+iter 40/311
+iter 60/311
+iter 80/311
+iter 100/311
+iter 120/311
+iter 140/311
+iter 160/311
+iter 180/311
+iter 200/311
+iter 220/311
+iter 240/311
+iter 260/311
+iter 280/311
+iter 300/311
+Prediction in progress, please wait...
+
+
+Results successfully saved at train_test_sets/ChimerDriverPredictions.csv
+Running on input file: chimerinput.tsv
+Creating structural features...
+unable to read setThe input file format did not fall into any of the usual cases.
+Please enter a file in a .csv format (or fusion_candidates.xlsx) with either one of the following sets of minimum required information separated by a tab:
+
+	1. gene names, labels, breakpoints, chromosomes, genome version in 7 columns defined as "5pCommonName", "3pCommonName", "Coord5p", "Coord3p", "Chr5p", "Chr3p", "Version"
+
+	2. gene names, labels, breakpoints, chromosomes, gene start, gene end in 10 columns defined as "Gene_Name1", "Gene_Name2", "Gene_Breakpoint1", "Gene_Breakpoint2", "Chr1", "Chr2", "Gene_Start1", "Gene_End1", "Gene_Start2", "Gene_End2"
+
+
+iter 0/311
+Prediction in progress, please wait...
+Running on input file: chimer_input.csv
+Creating structural features...
+unable to read setThe input file format did not fall into any of the usual cases.
+Please enter a file in a .csv format (or fusion_candidates.xlsx) with either one of the following sets of minimum required information separated by a tab:
+
+	1. gene names, labels, breakpoints, chromosomes, genome version in 7 columns defined as "5pCommonName", "3pCommonName", "Coord5p", "Coord3p", "Chr5p", "Chr3p", "Version"
+
+	2. gene names, labels, breakpoints, chromosomes, gene start, gene end in 10 columns defined as "Gene_Name1", "Gene_Name2", "Gene_Breakpoint1", "Gene_Breakpoint2", "Chr1", "Chr2", "Gene_Start1", "Gene_End1", "Gene_Start2", "Gene_End2"
+
+
+iter 0/311
+Prediction in progress, please wait...

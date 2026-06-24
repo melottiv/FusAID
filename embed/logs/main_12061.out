@@ -1,0 +1,5 @@
+Numero sequenze: 10
+Using device: cuda
+Shape embeddings: (10, 1280)
+Shape indices: (10,)
+Salvato in /homes/vmelotti/project/data/embeddings/sequence_SRR.pkl
