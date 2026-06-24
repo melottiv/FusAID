@@ -27,6 +27,3 @@ FusAID integrates two complementary branches:
 
 The final prediction is obtained via weighted soft-voting strategy
 
----
-
-## Repository Structure
