@@ -1,6 +1,6 @@
 # FusAID
 
-![image info](./img/graphical_abstract.jpg)
+![graphical abstract](./img/graphical_abstract.jpg)
 
 This repository provides a machine learning framework for prioritizing oncogenic fusion proteins by integrating sequence- and structure-based protein representations.
 
@@ -33,8 +33,10 @@ The repository consists of three main stages:
 
 ---
 
+![graphical abstract](./img/model_overview.png)
 
-# Preparing input Data
+
+# Preparing Input Data
 
 The pipeline expects as input a **Pandas DataFrame** stored as a `.pkl` file.
 
