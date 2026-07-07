@@ -1,0 +1,14 @@
+numpy
+pandas
+
+torch==2.7.1
+
+transformers==4.45.2
+huggingface_hub
+
+scikit-learn
+
+matplotlib
+networkx
+biopython
+tqdm
