@@ -1,4 +1,6 @@
-# Fusion Protein Driver Prioritization
+# FusAID
+
+![image info](./img/graphical_abstract.png)
 
 This repository provides a machine learning framework for prioritizing oncogenic fusion proteins by integrating sequence- and structure-based protein representations.
 
@@ -10,6 +12,7 @@ The framework supports four different prediction modes:
 * **Soft-voting ensemble**: ensemble of the sequence and structure models using a weighted combination of their prediction logits.
 
 The complete training and inference pipeline is implemented in Python using PyTorch and can be executed through command-line interfaces.
+
 
 
 ## Repository Overview
