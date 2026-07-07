@@ -3,16 +3,7 @@
 ![graphical abstract](./img/graphical_abstract.jpg)
 
 This repository provides a machine learning framework for prioritizing oncogenic fusion proteins by integrating sequence- and structure-based protein representations.
-
-The framework supports four different prediction modes:
-
-* **Sequence model**: classification based exclusively on protein sequence embeddings generated with **FusOn-pLM**.
-* **Structure model**: classification based exclusively on protein structure embeddings extracted from predicted protein structures.
-* **Concatenation model**: joint prediction using concatenated sequence and structure embeddings.
-* **Soft-voting ensemble**: ensemble of the sequence and structure models using a weighted combination of their prediction logits.
-
 The complete training and inference pipeline is implemented in Python using PyTorch and can be executed through command-line interfaces.
-
 
 
 ## Repository Overview
@@ -197,29 +188,6 @@ This strategy avoids homology and information leakage, since highly related fusi
 ## Training procedure
 
 During training, the model receives the precomputed embeddings corresponding to each fusion protein and optimizes a binary classification objective.
-
-The classifier outputs a prediction logit:
-
-\[
-z \in \mathbb{R}
-\]
-
-which is converted into a probability using the sigmoid function:
-
-\[
-p(y=1|x)=\sigma(z)=\frac{1}{1+e^{-z}}
-\]
-
-The model is trained by minimizing the binary cross entropy loss with logits:
-
-\[
-\mathcal{L} =
--y\log(\sigma(z))
--(1-y)\log(1-\sigma(z))
-\]
-
-implemented through PyTorch `BCEWithLogitsLoss`.
-
 At the end of each epoch, the model is evaluated on the validation set. The best checkpoint is selected according to validation performance and stored as a PyTorch checkpoint file.
 
 The checkpoint contains:
@@ -258,23 +226,6 @@ During validation and testing, the following metrics are computed:
 * **Recall**
 * **F1-score**
 * **ROC-AUC**
-
-For binary classification:
-
-\[
-Precision=\frac{TP}{TP+FP}
-\]
-
-\[
-Recall=\frac{TP}{TP+FN}
-\]
-
-\[
-F1=2\frac{Precision \cdot Recall}
-{Precision+Recall}
-\]
-
-The ROC-AUC is computed using the continuous prediction probabilities before thresholding.
 
 ---
 # Model training and testing
