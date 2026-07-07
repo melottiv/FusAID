@@ -1,6 +1,6 @@
 # FusAID
 
-![image info](./img/graphical_abstract.png)
+![image info](./img/graphical_abstract.jpg)
 
 This repository provides a machine learning framework for prioritizing oncogenic fusion proteins by integrating sequence- and structure-based protein representations.
 
