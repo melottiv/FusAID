@@ -33,7 +33,7 @@ The repository consists of three main stages:
 
 ---
 
-![graphical abstract](./img/model_overview.png)
+![graphical abstract](./img/model_outline.png)
 
 
 # Preparing Input Data
