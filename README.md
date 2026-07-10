@@ -302,9 +302,9 @@ python -u main_train_final.py \
     --mode soft_voting \
     --task is_onco \
     --checkpoint checkpoints/full_ens_vot_model.pt \
-    --df $DATA \
-    --chem_embs $CHEM \
-    --seq_embs $SEQ
+    --df data/raw/data.pkl \
+    --chem_embs data/embeddings/chemical_emb.npz \
+    --seq_embs data/embeddings/seq_emb.npz
 ```
 ### Testing
 ```bash
@@ -314,7 +314,7 @@ python -u main_test_final.py \
     --checkpoint_seq checkpoints/full_ens_vot_model_seq.pt \
     --checkpoint_struct checkpoints/full_ens_vot_model_struct.pt \
     --output /homes/vmelotti/project/src/out/ens_vot.tsv \
-    --df $DATA \
-    --chem_embs $CHEM \
-    --seq_embs $SEQ
+    --df data/raw/data.pkl\
+    --chem_embs data/embeddings/chemical_emb.npz \
+    --seq_embs data/embeddings/seq_emb.npz
 ```
