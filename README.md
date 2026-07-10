@@ -5,6 +5,34 @@
 This repository provides a machine learning framework for prioritizing oncogenic fusion proteins by integrating sequence- and structure-based protein representations.
 The complete training and inference pipeline is implemented in Python using PyTorch and can be executed through command-line interfaces.
 
+## Installation
+
+FusAID requires Python 3.10 or later.
+All required Python dependencies are provided in the requirements.txt file.
+
+The recommended installation procedure is:
+```bash
+conda create -n fusaid python=3.10
+conda activate fusaid
+```
+
+Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+The main dependencies include:
+
+* PyTorch
+* HuggingFace Transformers
+* scikit-learn
+* pandas
+* NumPy
+* SciPy
+* Biopython
+* tqdm
+
+GPU acceleration is recommended for embedding generation and model training. The experiments reported in the manuscript were performed using PyTorch 2.7.1 on NVIDIA A40 and L40S GPUs.
+For GPU-based execution, install the CUDA-compatible version of PyTorch according to the available hardware.
 
 ## Repository Overview
 
@@ -113,7 +141,7 @@ python -m src.embed.embed_sequence \
 ## Structure Embeddings
 
 Structure embeddings are generated from protein structures stored as `.cif` files.
-
+*Note*: AlphaFold structure prediction is not included in this repository. Users must provide predicted structures in CIF format before running the structure embedding extraction step.
 The script
 
 ```text
