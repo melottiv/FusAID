@@ -3,11 +3,13 @@
 ![graphical abstract](./img/graphical_abstract.jpg)
 
 This repository provides a machine learning framework for prioritizing oncogenic fusion proteins by integrating sequence- and structure-based protein representations.
+
 The complete training and inference pipeline is implemented in Python using PyTorch and can be executed through command-line interfaces.
 
 ## Installation
 
 FusAID requires Python 3.10 or later.
+
 All required Python dependencies are provided in the requirements.txt file.
 
 The recommended installation procedure is:
@@ -32,6 +34,7 @@ The main dependencies include:
 * tqdm
 
 GPU acceleration is recommended for embedding generation and model training. The experiments reported in the manuscript were performed using PyTorch 2.7.1 on NVIDIA A40 and L40S GPUs.
+
 For GPU-based execution, install the CUDA-compatible version of PyTorch according to the available hardware.
 
 ## Repository Overview
@@ -141,7 +144,8 @@ python -m src.embed.embed_sequence \
 ## Structure Embeddings
 
 Structure embeddings are generated from protein structures stored as `.cif` files.
-*Note*: AlphaFold structure prediction is not included in this repository. Users must provide predicted structures in CIF format before running the structure embedding extraction step.
+
+**Note**: AlphaFold structure prediction is not included in this repository. Users must provide predicted structures in CIF format before running the structure embedding extraction step.
 The script
 
 ```text
@@ -194,22 +198,6 @@ The framework supports four different learning strategies:
 * **Soft-voting ensemble**: combines the outputs of independently trained sequence and structure classifiers through a weighted combination of their prediction logits.
 
 All models are implemented in PyTorch and perform binary classification using a neural network classifier ora logistic regression for structural features.
-
----
-
-## Dataset splitting
-
-To evaluate the ability of the model to generalize to unseen fusion proteins, the dataset is divided into:
-
-* **Training set**: used for optimizing model parameters.
-* **Validation set**: used for model selection, threshold optimization, and ensemble weight selection.
-* **Test set**: used only for the final performance evaluation.
-
-The split is performed at the **gene level** rather than at the individual fusion protein level.
-
-For each fusion protein, the two participating genes are extracted and used as grouping information. A gene cannot appear in more than one split.
-
-This strategy avoids homology and information leakage, since highly related fusion proteins sharing one or both parental genes are prevented from appearing simultaneously in training and testing data.
 
 ---
 
