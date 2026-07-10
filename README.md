@@ -146,6 +146,7 @@ python -m src.embed.embed_sequence \
 Structure embeddings are generated from protein structures stored as `.cif` files.
 
 **Note**: AlphaFold structure prediction is not included in this repository. Users must provide predicted structures in CIF format before running the structure embedding extraction step.
+
 The script
 
 ```text
