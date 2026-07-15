@@ -244,7 +244,7 @@ During validation and testing, the following metrics are computed:
 * **F1-score**
 * **ROC-AUC**
  
---
+---
 
 # Usage
 ## Sequence model
